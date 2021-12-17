@@ -6,11 +6,11 @@ background: '/img/What-does-the-US-vs.-China-trade-war-do-to-gold.jpg'
 <h1>Introduction</h1>
 <br><br>
 <h3>The context</h3>
-<p>As a candidate for president, Donald Trump denounced the United States’ trade,
-
-    <q>“If China does not stop its illegal activities, including its theft of American trade secrets, I will use every
-        lawful presidential power to remedy trade disputes, including the application of tariffs consistent with Section
-        201 and 301 of the Trade Act of 1974 and Section 232 of the Trade Expansion Act of 1962”</q>, he said.
+<p>As a candidate for president, Donald Trump denounced denounced the trade relations between United States and China,
+    
+    <q><b>“If China does not stop its illegal activities, including its theft of American trade secrets, I will use every
+        lawful presidential power to remedy trade disputes, including the application of tariffs”</b></q>, 
+        he said.
 
     Hence, the US-China trade war began in July 2018, leading to tariffs on some US$550 billion of Chinese goods and
     US$185 billion of US goods. Afterwards, the trade conflict seemed to escalate in the Fall of 2019 with new tariff
@@ -20,7 +20,7 @@ background: '/img/What-does-the-US-vs.-China-trade-war-do-to-gold.jpg'
 
 </p>
 <h3>Our objective</h3>
-<p>Indeed, since those two countries have such an influence on the world economy, we can assume that every single
+<p> Since those two countries have such an influence on the world economy, we can assume that every single
     political tension related in the press is susceptible to have some repercussions on assets.
     Thus, we tried to analyze the US VS China trade war around the one million dollar question :
 <p class="font-weight-bold text-center">What comes first : the price, or the sentiment?</p>
@@ -51,9 +51,24 @@ background: '/img/What-does-the-US-vs.-China-trade-war-do-to-gold.jpg'
 <h1>The data we used</h1>
 <br><br>
 <h3>Quotes</h3>
-Quotebank dataset can be used to extract sentiment from its great amount of
-quotes which cover the trade war period. We plan to use enhanced daily data about
-significant assets as our stock variation reference.
+<p>
+As stated in the introduction, the trade war between the US and China started in January 2018. 
+Hence, we can retrieve quotes from Quotebank from the corresponding period using red flags in the quotations.
+ If you wonder what topics are discussed about trade war, a word cloud is worth a thousand words…
+  We can see that our filtering is effective as the dominant words are trade war related.
+</p>
+<br>
+  <img src="img/wordcloud.jpg" alt="centered image" width="500" height="400">
+<br>
+  <p>
+      We can also wonder who is talking about economical relations between US and China. 
+      Within the extracted quote we kept the 20 most popular speakers according to the number of quotations they made 
+      regarding US-China trade war.
+      Without any surprises, our little <b>Donald</b> is under the spotlight!
+  </p>
+
+  <img src="img/piechart.png" alt="Your Image"width="800" height="800" >
+
 <br><br>
 <h3>Stock Market </h3>
 <p> A <b> stock market </b>is the aggregation of buyers and sellers (a loose network of economic transactions,
@@ -108,40 +123,24 @@ U.S. markets, regular trading sessions run from 9:30 a.m. to 4:00 p.m. Eastern T
 
 <br>
 
-<h1>What the data says</h1>
-<br><br>
-<h4>What are the most recurent words?</h4>
-<p>With more than 178 million quotations at our disposal, we need to focus on meaningful words. So after doing some
-    filtering, we are able to see the words related to trade war. Hence our filtering is effective as we can see that
-    words related to the trade war are indeed predominent.
-</p>
-<p class="aligncenter">
-    <img src="img/wordcloud.jpg" alt="centered image" width="500" height="400">
-</p>
-<br>
-<br>
-<h4>Who are the most 20 popular speackers?</h4>
-
-    
-  
-  <!-- In Your Html Code -->
-  <img src="img/piechart.png" alt="Your Image"width="500" height="500" >
-  
-  
-<h4>How is the sentiment evolving througout time?</h4>
-<img src="img/2021-12-17 19.36.44.jpg" alt="Your Image"width="1000" height="500" >
-<br>
-<br>
-<hr class="solid">
-<br>
 <h1>Sentiment Analysis</h1>
 
 <p>
+    Quotebank provide us trade war-related quotes but now we need to add value to them using sentiment analysis.
+     <br>
+      
+      
+
     As it was mentioned in the introduction, we are looking to find a correlation between the sentiment of
     quotes and the actual stock market. Because it’s impossible to look at all the quotes and attribute them with a
     discrete/continuous value, the challenge in this part was to apply the correct method to extract sentiment features
-    from the quotes. By doing some research we found the rule based approaches where the quotes are analysed without the
-    need of training or using machine learning models, in special, Text Blob and Vader analyzers.
+    from the quotes. 
+    <br>
+    There are several ways for doing this :
+    <br><br>
+    One can use a <b>rule-based</b> approach. This method consists in computing the positive or negative 
+    sentiment of each word within a sequence and then averaging this sentiment over the whole sequence.
+     This way we can compute probabilities for each quote to be positive and negative and even build binary feature.
 
 </p>
 
@@ -161,18 +160,95 @@ U.S. markets, regular trading sessions run from 9:30 a.m. to 4:00 p.m. Eastern T
      The method works by posing the sequence to be classified as the NLI premise and to construct a hypothesis from each candidate label,
     it can give probabilities with selected candidate labels.
 
-
 </p>
 
+<br>
+<br>
 
-<h2>The results</h2>
+<hr class="solid">
 
-<h1>Regression or classification ?</h1>
+<br>
 
-<h1>Long Short Term Memory Implementation</h1>
 
+
+<h1>What the data says</h1>
+<br>
+
+
+
+  <!-- In Your Html Code -->
+  
+  
+<h3>Trade War quotes first insights</h3>
+<br><br>
+<h4>How is the sentiment evolving througout time? </h4>
+<p>Now we have all the ingredients to start investigating on the role of quotes as stock variations predictors. 
+    The stock dataset features are computed on a daily frequency. 
+    In order to match quotations sentiment with the stock features we need to average the quotes sentiment per day.
+     Once this is done, here is a time series of sentiment analysis over the trade war period.
+</p>
+<img src="img/2021-12-17 19.36.44.jpg" alt="Your Image"width="1000" height="500"/>
+<br>
+<br>
+<h4>Can we measure the sentiment in a more relevant way?</h4>
+<p>Quotebank dataset provide the number of occurences of each quotes which corresponds to the number of times
+     the quote has been relayed. We can use this to perform extra weighting when computing the daily sentiment from quotations.
+      Indeed, we can consider that the more a quote is relayed, the more important it is. That way, we can have an even better insight about the sentiment evolution.
+       Here is the corresponding weighted sentiment time series.
+    <img src="img/2021-12-17 19.36.59.jpg" alt="Your Image"width="1000" height="500" >
+</p>
+<br>
+<h4>A first glimpse of correlation </h4>
+<br>
+<p>
+    Our first idea was to focus on a smaller time lapse to get a sense of the correlation between
+     sentiment and stock variation. We considered the month of January 2018, when it all started.
+
+</p>
+<img src="img/january.png" alt="Your Image"width="600" height="500" >
+<br>
+<p>
+    We noticed that the correlation was rather weak, and it seemed that peaks in sentiment and stock variations
+     were alike but shifted in time. This is when we decided to include a memory pattern within quotes’ sentiment. 
+     For that purpose, we averaged the quotes sentiment over a time window to contrast previous results. 
+     Here for a 3 days window:
+
+</p>
+<img src="img/january2.png" alt="Your Image"width="600" height="500" >
+<br>
+<p>
+    We saw an improvement in correlation and decided to build a model that would be able to forecast the stock 
+    values using memory aspect, namely a LSTM model.
+
+</p>
+<hr class="solid">
+<br>
+
+
+
+
+
+
+
+
+<h2>On our way to stock prediction</h2>
+<p>
+    The idea is to predict the open value of a stock for a given day using stock dataset features and quotes 
+    sentiment features using only the previous days information. Here are our results for example for BG stock, 
+    we trained on the years 2018 and 2019 and forecasted the open value of stock for the trade war from march 2020.
+</p>
+
+<img src="img/lstm.png" alt="Your Image"width="600" height="500" >
+
+<p>In order to quantify the improvement when including quotes’ sentiment 
+     we computed RMSE in both scenarios i.e. including or not the sentiment features.
+      We got better results when using probabilities for positive and negative labels than binary variables.
+       Here are the improvements of RMSE for each stock dataset 
+    when including sentiment features.
+</p>
 <h1>Final Results</h1>
 
 <h1>Conclusion</h1>
 
-<h3>Authors</h3>
+
+<h3>References</h3>
