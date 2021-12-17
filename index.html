@@ -4,7 +4,7 @@ background: '/img/What-does-the-US-vs.-China-trade-war-do-to-gold.jpg'
 ---
 <a id=Introduction></a><br><br>
 <h1>Introduction</h1>
-
+<br><br>
 <h3>The context</h3>
 <p>As a candidate for president, Donald Trump denounced the United States’ trade,
 
@@ -32,7 +32,6 @@ background: '/img/What-does-the-US-vs.-China-trade-war-do-to-gold.jpg'
     <li>Does the news only relate recent variations of the stock market when these variations have already been
         officially published?</li>
     <li>Are we able to predict a specific stock market using sentiment analysis on newspaper quotes?</li>
-    <li>Is a daily frequency sufficient to capture correlation or causation between news and stock prices?</li>
     <li>Can we quantify the time window within which a quote can influence the stock market ? (We suppose here that
         sentiment influence must vanish when time is passing).</li>
     <li>What is the correlation between media quotations and stock prices behavior under a specific model?</li>
@@ -44,12 +43,18 @@ background: '/img/What-does-the-US-vs.-China-trade-war-do-to-gold.jpg'
     <li>Are assets affected proportionally to the frequency they are mentioned in quotes ?</li>
 
 </ul>
+<br>
+ 
+<hr class="solid">
 
-<h1>Datasets</h1>
-<h3>Quotebank</h3>
+<a id=Datasets></a><br><br>
+<h1>The data we used</h1>
+<br><br>
+<h3>Quotes</h3>
 Quotebank dataset can be used to extract sentiment from its great amount of
 quotes which cover the trade war period. We plan to use enhanced daily data about
-significant assets as our stock variation reference .
+significant assets as our stock variation reference.
+<br><br>
 <h3>Stock Market </h3>
 <p> <b> A stock market </b>is the aggregation of buyers and sellers (a loose network of economic transactions,
     not a physical facility or entity) of <a href="https://en.wikipedia.org/wiki/Stock" target="_blank">stocks</a> (also
@@ -84,17 +89,25 @@ significant assets as our stock variation reference .
 <img src="img/Open.jpg" alt="open_djia" width="1000" height="400" class="center">
 <img src="img/Close.jpg" alt="close_djia" width="1000" height="400"class="center">
 
+<br>
+<br>
+
+<hr class="solid">
+
+<br>
 
 <h1>What the data says</h1>
+<br><br>
 <h4>What are the most recurent words?</h4>
 <p>With more than 178 million quotations at our disposal, we need to focus on meaningful words. So after doing some filtering, we  are able to  see the words related to trade war. Hence our filtering is effective as we can see that words related to the trad war are indeed predominent.
 </p>
-
-<img src="img/wordcloud.jpg" alt="wordcloud" width="500" height="400" class="marginauto">
+<p class="aligncenter">
+    <img  src="img/wordcloud.jpg"  alt="centered image"  width="500" height="400" >
+</p>
 <br>
 <br>
 <h4>Who are the most 20 popular speackers?</h4>
-<img src="img/piechart.png" alt="piechart" width="500" height="500">
+<img src="img/piechart.png" alt="piechart" width="500" height="500"/>
 <h1>Sentiment Analysis</h1>
 <h2>Rule-based approch</h2>
 <h2>Zero shot learning</h2>
