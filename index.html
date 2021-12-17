@@ -35,13 +35,9 @@ background: '/img/What-does-the-US-vs.-China-trade-war-do-to-gold.jpg'
     <li>Can we quantify the time window within which a quote can influence the stock market ? (We suppose here that
         sentiment influence must vanish when time is passing).</li>
     <li>What is the correlation between media quotations and stock prices behavior under a specific model?</li>
-    <li>What are good embedded features for stock prediction using NLP on quotations?</li>
-    <li>What kind of sentiment analysis features capture valuable information from quotes? Rule-based or embedding
-        sentiment analysis ? TensorHub model (GloVe, fasttext, word2vec) ?</li>
     <li>Are they red flags in quotes that are better predictors than sentiment analysis ?</li>
     <li>Which assets are more affected by sentiment if applicable?</li>
-    <li>Are assets affected proportionally to the frequency they are mentioned in quotes ?</li>
-
+    
 </ul>
 <br>
 
@@ -247,6 +243,31 @@ U.S. markets, regular trading sessions run from 9:30 a.m. to 4:00 p.m. Eastern T
     when including sentiment features.
 </p>
 <h1>Final Results</h1>
+
+<ul>
+    <li>
+        After analyzing the January daily quotes average sentiment vs daily stock variation, one can notice that
+        the time series are different. Hence, stock and quotes have their own variation no one is following 
+        the other strictly maybe influence… what we quantify next
+
+    </li>
+    <li>
+        We are able to predict a specific stock market using sentiment analysis on newspaper quotes thanks to a machine learning
+        algorithm called LSTM (Long Short Term Memory).
+        After testing different timesteps, we showed that RMSE test improvement are lower for smaller timesteps (3, 7 days). 
+        So it is true that the time window within which a quote can influence the stock market.
+    </li>
+    <li>
+        Our next step would have been to use red flags in quotes with extra features to see if they are better predictors.
+    </li>
+    <li>
+        Based on the bar charts we computed, The assets that are most affected by sentiment are the General Motors Stocks (GM).
+    </li>
+
+
+    
+    
+</ul>
 
 <h1>Conclusion</h1>
 
