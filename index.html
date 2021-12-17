@@ -44,7 +44,7 @@ background: '/img/What-does-the-US-vs.-China-trade-war-do-to-gold.jpg'
 
 </ul>
 <br>
- 
+
 <hr class="solid">
 
 <a id=Datasets></a><br><br>
@@ -56,41 +56,50 @@ quotes which cover the trade war period. We plan to use enhanced daily data abou
 significant assets as our stock variation reference.
 <br><br>
 <h3>Stock Market </h3>
-<p> <b> A stock market </b>is the aggregation of buyers and sellers (a loose network of economic transactions,
+<p> A <b> stock market </b>is the aggregation of buyers and sellers (a loose network of economic transactions,
     not a physical facility or entity) of <a href="https://en.wikipedia.org/wiki/Stock" target="_blank">stocks</a> (also
     called shares),
-    which represent ownership claims on businesses; these may include securities listed on a public <a href = "https://en.wikipedia.org/wiki/Stock_exchange" target="_blank"> stock exchange</a> , as
+    which represent ownership claims on businesses; these may include securities listed on a public <a
+        href="https://en.wikipedia.org/wiki/Stock_exchange" target="_blank"> stock exchange</a> , as
     well as stock that is only traded privately.
-    
+
 </p>
 <p>
-    To collect stock data we used <a href="https://pypi.org/project/yfinance/" target="_blank">yfinance</a> python API. yfinance is a popular open source library developed by <a href = "https://aroussi.com/" target="_blank">Ran Aroussi</a>
-     as a means to access the financial data available on Yahoo Finance.
+    To collect stock data we used <a href="https://pypi.org/project/yfinance/" target="_blank">yfinance</a> python API.
+    yfinance is a popular open source library developed by <a href="https://aroussi.com/" target="_blank">Ran
+        Aroussi</a>
+    as a means to access the financial data available on Yahoo Finance.
 </p>
 <p>
-    <a href = "https://uk.finance.yahoo.com/" target="_blank">Yahoo Finance</a> offers an excellent range of market data on stocks, bonds, currencies and cryptocurrencies. It also
+    <a href="https://uk.finance.yahoo.com/" target="_blank">Yahoo Finance</a> offers an excellent range of market data
+    on stocks, bonds, currencies and cryptocurrencies. It also
     offers market news, reports and analysis and additionally options and fundamentals data- setting it apart from some
     of it’s competitors.
 </p>
-<p>  
-   <u>Example:</u>  <br>
-    The Dow Jones Industrial Average (DJIA) is a price-weighted average of 30 significant stocks traded on  <a href = "https://www.investopedia.com/terms/n/nyse.asp" target ="_blank">the New York Stock Exchange</a> 
-    (NYSE) and the <a href = "https://www.investopedia.com/terms/n/nasdaq.asp" target ="_blank">Nasdaq</a>.The DJIA was invented by Charles Dow in 1896.
+<p>
+    <u>Example:</u> <br>
+    The Dow Jones Industrial Average (DJIA) is a price-weighted average of 30 significant stocks traded on <a
+        href="https://www.investopedia.com/terms/n/nyse.asp" target="_blank">the New York Stock Exchange</a>
+    (NYSE) and the <a href="https://www.investopedia.com/terms/n/nasdaq.asp" target="_blank">Nasdaq</a>.The DJIA was
+    invented by Charles Dow in 1896.
 </p>
 <p>
     Often referred to as “the Dow,” the DJIA is one of the oldest, single most-watched indices in the world and includes
     companies such as the General Electric Company, the Walt Disney Company, Exxon Mobil Corporation and Microsoft
-    Corporation. When the TV networks say <a href = "https://www.investopedia.com/terms/m/marketisup.asp" target = "_blank">“the market is up today”</a> , they are generally referring to the Dow.
+    Corporation. When the TV networks say <a href="https://www.investopedia.com/terms/m/marketisup.asp"
+        target="_blank">“the market is up today”</a> , they are generally referring to the Dow.
     <br>
     <br>
     So with DJIA, we now have a reliable way to see how the market fared on a day. What we need now is a way to mine the
     public opinion, we turn to quoteBank.
 </p>
-Rate of return pricing is a method by which a company fixes the price of the product in such a way that it ultimately helps organisations in achieving the ultimate goal or return on the capital employed
+Rate of return pricing is a method by which a company fixes the price of the product in such a way that it ultimately
+helps organisations in achieving the ultimate goal or return on the capital employed
 <img src="img/Open.jpg" alt="open_djia" width="1000" height="400" class="center">
 <br>
-"Closing price" generally refers to the last price at which a stock trades during a regular trading session. For many U.S. markets, regular trading sessions run from 9:30 a.m. to 4:00 p.m. Eastern Time.
-<img src="img/Close.jpg" alt="close_djia" width="1000" height="400"class="center">
+"Closing price" generally refers to the last price at which a stock trades during a regular trading session. For many
+U.S. markets, regular trading sessions run from 9:30 a.m. to 4:00 p.m. Eastern Time.
+<img src="img/Close.jpg" alt="close_djia" width="1000" height="400" class="center">
 
 <br>
 <br>
@@ -102,19 +111,60 @@ Rate of return pricing is a method by which a company fixes the price of the pro
 <h1>What the data says</h1>
 <br><br>
 <h4>What are the most recurent words?</h4>
-<p>With more than 178 million quotations at our disposal, we need to focus on meaningful words. So after doing some filtering, we  are able to  see the words related to trade war. Hence our filtering is effective as we can see that words related to the trad war are indeed predominent.
+<p>With more than 178 million quotations at our disposal, we need to focus on meaningful words. So after doing some
+    filtering, we are able to see the words related to trade war. Hence our filtering is effective as we can see that
+    words related to the trade war are indeed predominent.
 </p>
 <p class="aligncenter">
-    <img  src="img/wordcloud.jpg"  alt="centered image"  width="500" height="400" >
+    <img src="img/wordcloud.jpg" alt="centered image" width="500" height="400">
 </p>
 <br>
 <br>
 <h4>Who are the most 20 popular speackers?</h4>
-<img src="img/piechart.png" alt="piechart" width="500" height="500"/>
+
+    
+  
+  <!-- In Your Html Code -->
+  <img src="img/piechart.png" alt="Your Image"width="500" height="500" >
+  
+  
+<h4>How is the sentiment evolving througout time?</h4>
+<img src="img/2021-12-17 19.36.44.jpg" alt="Your Image"width="1000" height="500" >
+<br>
+<br>
+<hr class="solid">
+<br>
 <h1>Sentiment Analysis</h1>
-<h2>Rule-based approch</h2>
-<h2>Zero shot learning</h2>
-<h2>Unsuppervised learning - Clustering</h2>
+
+<p>
+    As it was mentioned in the introduction, we are looking to find a correlation between the sentiment of
+    quotes and the actual stock market. Because it’s impossible to look at all the quotes and attribute them with a
+    discrete/continuous value, the challenge in this part was to apply the correct method to extract sentiment features
+    from the quotes. By doing some research we found the rule based approaches where the quotes are analysed without the
+    need of training or using machine learning models, in special, Text Blob and Vader analyzers.
+
+</p>
+
+<p>
+    <b>Textblob</b> sentiment analyzer returns two properties for a given input sentence Polarity is a float that lies 
+    between [-1,1], -1 indicates negative sentiment and +1 indicates positive sentiments. 
+
+</p>
+
+<p>
+    <b>Vader</b> on the other hand is an analyzer that uses a list  that can either return a labelled sentiment (Positive/Negative)
+     to the quotation or the return the probability of the quotation being positive or negative.
+
+</p>
+<p>
+     In addition, to these analyzers we decided to use <b>zero shot bart</b>, which is a ML model trained by facebook.
+     The method works by posing the sequence to be classified as the NLI premise and to construct a hypothesis from each candidate label,
+    it can give probabilities with selected candidate labels.
+
+
+</p>
+
+
 <h2>The results</h2>
 
 <h1>Regression or classification ?</h1>
